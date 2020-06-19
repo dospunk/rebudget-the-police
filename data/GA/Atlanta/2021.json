@@ -1,0 +1,31 @@
+{
+    "name": "General Fund",
+    "link": "https://citycouncil.atlantaga.gov/standing-committees/finance-executive-committee/fy-2021-proposed-budget",
+    "budget": {
+        "City Council": 11995344,
+        "Executive Offices": 18624823,
+        "Department of Atlanta Information Management": 29339224,
+        "Department of Law": 6300872,
+        "Department of Corrections": 18900714,
+        "Department of Finance": 16492307,
+        "Department of Procurement": 2931817,
+        "Department of Public Works": 0,
+        "Dept of Parks & Recreation": 40786110,
+        "Judicial Agencies": 13016665,
+        "Non-Departmental": 94242078,
+        "Department of Human Resources": 6330048,
+        "Department of Fire Services": 96162247,
+        "Department of Police Services": 217565960,
+        "Department of City Planning": 20857605,
+        "Department of The Solicitor": 6703401,
+        "Board of Ethics & Independent Compliance": 1644168,
+        "Atlanta Citizens Review Board": 940940,
+        "Department of Audit": 2048652,
+        "Department of Public Defender": 3898182,
+        "Department of Enterprise Aassets Management": 17187890,
+        "Department of Customer Service": 2803117,
+        "Atlanta Department of Transportation": 44321889,
+        "Department of Grants and Community Development": 313400 
+    },
+    "desc": ""
+}
