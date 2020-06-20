@@ -32,7 +32,7 @@ jobs:
     - name: install node modules
       run: npm install
     - name: Typescript compiler
-      uses: iCrawl/action-tsc@v1
+      run: tsc
       
     - name: commit js
       run: |
