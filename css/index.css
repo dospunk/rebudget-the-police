@@ -1,0 +1,47 @@
+:root {
+    --lr-margins: 30px;
+}
+
+#budgetAdjustmentsContainer {
+    display: none;
+}
+
+#excludes {
+    display: none;
+}
+
+main {
+    margin-left: var(--lr-margins);
+    margin-right: var(--lr-margins);
+}
+
+h1 {
+    text-align: center;
+}
+
+#budgetSelectForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#budgetSelectForm > fieldset {
+    margin-right: 5%;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ul > li {
+    padding-left: 40px;
+}
+
+figcaption {
+    font-size: small;
+}
+
+#mainFigure {
+    margin-bottom: 40px;
+}
