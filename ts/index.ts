@@ -10,7 +10,7 @@ let g_policeLabel: string;
 $(document).ready(function() {
 	$('.select2').select2();
 
-    console.log("this is just to test the automatic typescript compliation");
+    console.log("this is to test the automatic typescript compliation");
 	
 	$('#budgetSelectForm').submit(function(evt){
 		evt.preventDefault();
