@@ -124,5 +124,5 @@ function discloseExcludes(excludes) {
     }
 }
 function showLinkToBudget(link) {
-    $("#budgetLink").attr("href", link);
+    $("#budgetLink").show().attr("href", link);
 }

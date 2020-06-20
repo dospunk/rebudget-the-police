@@ -137,5 +137,5 @@ function discloseExcludes(excludes: string[]) {
 }
 
 function showLinkToBudget(link: string): void{
-	$("#budgetLink").attr("href", link);
+	$("#budgetLink").show().attr("href", link);
 }
