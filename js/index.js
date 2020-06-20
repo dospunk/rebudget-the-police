@@ -27,6 +27,7 @@ $(document).ready(function () {
             createGraph(data);
             showAdjustmentControls();
             discloseExcludes(data.excludes);
+            showLinkToBudget(data.link);
         });
     });
 });
@@ -121,4 +122,7 @@ function discloseExcludes(excludes) {
         excludesList.html("");
         $("#excludes").hide();
     }
+}
+function showLinkToBudget(link) {
+    $("#budgetLink").attr("href", link);
 }

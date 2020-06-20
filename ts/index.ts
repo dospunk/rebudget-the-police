@@ -23,7 +23,8 @@ $(document).ready(function() {
             g_policeLabel = data.policeLabel;
             createGraph(data);
             showAdjustmentControls();
-            discloseExcludes(data.excludes);
+			discloseExcludes(data.excludes);
+			showLinkToBudget(data.link);
 		});
 	});
 });
@@ -133,4 +134,8 @@ function discloseExcludes(excludes: string[]) {
         excludesList.html("");
         $("#excludes").hide();
     }
+}
+
+function showLinkToBudget(link: string): void{
+	$("#budgetLink").attr("href", link);
 }
