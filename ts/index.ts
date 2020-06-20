@@ -1,5 +1,3 @@
-//TODO: make a type definition for the data
-
 const g_copBlue: string = "#0000ff";
 const g_budgetAdjustmentsDisplay: string = "block";
 let g_chart: Chart;
@@ -9,8 +7,6 @@ let g_policeLabel: string;
 
 $(document).ready(function() {
 	$('.select2').select2();
-
-    console.log("this is to test the automatic typescript compliation");
 	
 	$('#budgetSelectForm').submit(function(evt){
 		evt.preventDefault();
