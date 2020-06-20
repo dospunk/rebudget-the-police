@@ -20,7 +20,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+      
     - name: install node
       uses: actions/setup-node@v1.4.2
       with: 
@@ -29,3 +33,24 @@ jobs:
       run: npm install
     - name: Typescript compiler
       uses: iCrawl/action-tsc@v1
+      
+    - name: commit js
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -f js/*
+        git commit -m "Compiled javascript from typescript"
+  
+    - name: push commit
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUBTOKEN }}
+        branch: action-pr
+        
+    - name: Initialize Pull Request
+      uses: gha-utilities/init-pull-request@v0.0.4
+      with:
+        pull_request_token: ${{ secrets.GITHUBTOKEN }}
+        head: action-pr
+        base: master
+        title: 'Updates javascript files from latest Actions build'
