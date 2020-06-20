@@ -77,6 +77,7 @@ function showAdjustmentControls(): void {
 }
 
 function createDepartmentOptionsArray(departments: string[], policeLabel: string): void {
+    departments.sort();
     $.each(departments, (idx, val)=>{
         if (val !== policeLabel) {
             let elem: HTMLOptionElement = document.createElement("option");
@@ -84,7 +85,7 @@ function createDepartmentOptionsArray(departments: string[], policeLabel: string
             elem.setAttribute("value", val);
             g_departmentOptions.push(elem);
         }
-    })
+    });
 }
 
 function addAdjustmentLine(): void{
