@@ -43,13 +43,14 @@ jobs:
     - name: push commit
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUBTOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: action-pr
         
     - name: Initialize Pull Request
-      uses: gha-utilities/init-pull-request@v0.0.4
+      uses:  peter-evans/create-pull-request@v2
       with:
-        pull_request_token: ${{ secrets.GITHUBTOKEN }}
-        head: action-pr
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: action-pr
         base: master
         title: 'Updates javascript files from latest Actions build'
+        labels: automerge
