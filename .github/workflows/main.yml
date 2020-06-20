@@ -47,10 +47,10 @@ jobs:
         branch: action-pr
         
     - name: Initialize Pull Request
-      uses:  peter-evans/create-pull-request@v2
+      uses:  repo-sync/pull-request@v2
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        branch: action-pr
-        base: master
-        title: 'Updates javascript files from latest Actions build'
-        labels: automerge
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        source_branch: action-pr
+        destination_branch: master
+        pr_title: 'Updates javascript files from latest Actions build'
+        pr_label: automerge
