@@ -17,7 +17,7 @@ $(document).ready(function() {
         const dataPath: string = 
             `data/${fd.get("state")}/${fd.get("city")}/${fd.get("year")}.json`;
 		$.getJSON(dataPath, (data: BudgetData)=>{
-            console.dir(data);//DEV
+            //console.dir(data);//DEV
             for (let i = 0; i < data.excludes.length; i++) {
                 delete data.budget[data.excludes[i]];
                 
@@ -103,7 +103,7 @@ function addAdjustmentLine(): void{
 }
 
 function removeAdjustmentLine(elem: HTMLButtonElement): void {
-    console.log("removing adjustment line");//DEV
+    //console.log("removing adjustment line");//DEV
     let p: HTMLElement = $(elem).parent()[0];
     p.remove();
 }
