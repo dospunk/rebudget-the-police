@@ -15,7 +15,7 @@ $(document).ready(function() {
         const dataPath: string = 
             `data/${fd.get("state")}/${fd.get("city")}/${fd.get("year")}.json`;
 		$.getJSON(dataPath, (data: BudgetData)=>{
-            //console.dir(data);//DEV
+            console.dir(data);//DEV
             for (let i = 0; i < data.excludes.length; i++) {
                 delete data.budget[data.excludes[i]];
                 
@@ -76,7 +76,7 @@ function showAdjustmentControls(): void {
 }
 
 function createDepartmentOptionsArray(departments: string[], policeLabel: string): void {
-    departments.sort();
+    let sortedDepts = [...departments].sort();
     $.each(departments, (idx, val)=>{
         if (val !== policeLabel) {
             let elem: HTMLOptionElement = document.createElement("option");

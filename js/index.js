@@ -19,7 +19,7 @@ $(document).ready(function () {
         var fd = new FormData(form);
         var dataPath = "data/" + fd.get("state") + "/" + fd.get("city") + "/" + fd.get("year") + ".json";
         $.getJSON(dataPath, function (data) {
-            //console.dir(data);//DEV
+            console.dir(data); //DEV
             for (var i = 0; i < data.excludes.length; i++) {
                 delete data.budget[data.excludes[i]];
             }
@@ -72,7 +72,7 @@ function showAdjustmentControls() {
     $("#budgetAdjustmentsContainer").show();
 }
 function createDepartmentOptionsArray(departments, policeLabel) {
-    departments.sort();
+    var sortedDepts = __spreadArrays(departments).sort();
     $.each(departments, function (idx, val) {
         if (val !== policeLabel) {
             var elem = document.createElement("option");
